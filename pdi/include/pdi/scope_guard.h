@@ -69,8 +69,8 @@ public:
 	 */
 	~ScopeGuard() noexcept { PDI_finalize(); }
 
-	ScopeGuard(const ScopeGuard&) = delete;
-	ScopeGuard(ScopeGuard&&) = delete;
+	ScopeGuard(const ScopeGuard&) = delete; // On empêche la copie
+	// ScopeGuard(ScopeGuard&&) = delete; // On n'empêche pas le déplacement
 	ScopeGuard& operator= (const ScopeGuard&) = delete;
 	ScopeGuard& operator= (ScopeGuard&&) = delete;
 };
