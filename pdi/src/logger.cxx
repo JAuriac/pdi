@@ -78,8 +78,8 @@ shared_ptr<logger> select_log_sinks(const string& logger_name, PC_tree_t logging
 	vector<sink_ptr> sinks;
 	PC_tree_t output_tree = PC_get(logging_tree, ".output");
 
-	// configure file sink : supports `output: { file: "path" }` and the
-	// shorthand `output : "path"` (bare scalar used directly as the filename)
+	//configure file sink : supports `output: { file: "path" }` and the
+	//shorthand `output : "path"` (bare scalar used directly as the filename)
 	PC_tree_t file_tree = PC_get(output_tree, ".file");
 	if (PC_status(file_tree)) {
 		file_tree = output_tree;
@@ -310,10 +310,10 @@ void Logger::evaluate_global_pattern(Context& ctx) const
 
 void Logger::redirect_output(const std::string& filepath) const
 {
-	// Clear existing sinks (stdout/stderr) and replace with a file sink
+	//clear existing sinks (stdout/stderr) and replace with a file sink
 	auto file_sink = std::make_shared<spdlog::sinks::basic_file_sink_mt>(filepath, true);
 
-	// Access underlying spdlog logger and swap sinks
+	//access underlying spdlog logger and swap sinks
 	m_logger->sinks().clear();
 	m_logger->sinks().push_back(file_sink);
 }

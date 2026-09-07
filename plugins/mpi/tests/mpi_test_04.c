@@ -73,8 +73,6 @@ int main(int argc, char* argv[])
 			fprintf(stderr, "*** Error: log file is empty\n");
 			MPI_Abort(MPI_COMM_WORLD, 1);
 		}
-		// non-master ranks are tagged "MPI 000001"/"MPI 000002" in the pattern;
-		// none of their messages should have made it into the file
 		if (strstr(buf, "MPI 000001") || strstr(buf, "MPI 000002")) {
 			fprintf(stderr, "*** Error: log file contains output from a non-master rank\n");
 			MPI_Abort(MPI_COMM_WORLD, 1);

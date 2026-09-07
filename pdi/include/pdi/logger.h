@@ -171,10 +171,15 @@ public:
 	 */
 	void evaluate_global_pattern(Context& ctx) const;
 
+	/** Redirects this logger's output to a file, replacing any sinks
+	 *  currently in use (console or previously configured file)
+	 *
+	 * \param[in] filepath path of the file to write log output to
+	 */
 	void redirect_output(const std::string& filepath) const;
 
 	/** Mutes (or unmutes) this logger and cascades to every plugin logger
-	 *  that currently has, or will later get, this logger as parent.
+	 *  that currently has, or will later get, this logger as parent
 	 *
 	 * \param[in] muted whether to mute this logger
 	 *
