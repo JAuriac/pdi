@@ -20,6 +20,7 @@ and this project adheres to
 #### Removed
 
 #### Fixed
+* Typographical error in test and String_literal false_values
 
 #### Security
 
