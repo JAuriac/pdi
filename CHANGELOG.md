@@ -12,7 +12,6 @@ and this project adheres to
 ### For users
 
 #### Added
-* Fixed multiple typos in the documentation, fix [#749](https://github.com/pdidev/pdi/issues/749)
 
 #### Changed
 
@@ -21,6 +20,7 @@ and this project adheres to
 #### Removed
 
 #### Fixed
+* Fix multiple typos in the documentation, fix [#749](https://github.com/pdidev/pdi/issues/749)
 
 #### Security
 
